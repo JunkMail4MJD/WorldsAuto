@@ -329,15 +329,23 @@ task main() {
 	moveRobot( targetClawPosition, targetWristPosition, targetArmPosition, armPowerLevel, drivePowerLevel, mmToDrive, STRAIGHT);
 	//wait1Msec(100);
 
-	//backup to clear the line of blocks
+	//go over red blocks and grab them
 	mmToDrive = -20.0;
 	armPowerLevel = 100;
 	drivePowerLevel = 100;
-	targetClawPosition 	= FULL_OPEN_CLAW;
+  targetClawPosition 	= PICKUP_BLOCK_CLAW;
 	targetWristPosition = REVERSE_GRIP_WRIST;
 	targetArmPosition		=	REVERSE_GRIP_ARM;
 	moveRobot( targetClawPosition, targetWristPosition, targetArmPosition, armPowerLevel, drivePowerLevel, mmToDrive, DRIFT_LEFT);
-	wait1Msec(100);
+
+	//move to stacking position red
+	mmToDrive = -210;
+	armPowerLevel = 100;
+	drivePowerLevel = 100;
+	targetClawPosition = FULL_OPEN_CLAW;
+  targetWristPosition = REVERSE_GRIP_WRIST;
+	targetArmPosition		=	REVERSE_GRIP_ARM;
+	moveRobot( targetClawPosition, targetWristPosition, targetArmPosition, armPowerLevel, drivePowerLevel, mmToDrive, DRIFT_LEFT);
 
 	moveToNeutralPosition();
 
