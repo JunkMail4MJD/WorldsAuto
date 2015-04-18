@@ -150,7 +150,7 @@ task main() {
 
 
 	//Back up from wall
-	mmToDrive = -200.0;
+	mmToDrive = -210.0;
 	drivePowerLevel = 75;
 	moveRobot( targetClawPosition, targetWristPosition, targetArmPosition, armPowerLevel, drivePowerLevel, mmToDrive, DRIFT_MODERATE_RIGHT);
 	wait1Msec(50);
@@ -330,7 +330,7 @@ task main() {
 	//wait1Msec(100);
 
 	//backup to clear the line of blocks
-	mmToDrive = -800.0;
+	mmToDrive = -20.0;
 	armPowerLevel = 100;
 	drivePowerLevel = 100;
 	targetClawPosition 	= FULL_OPEN_CLAW;
@@ -560,7 +560,7 @@ long calculateMotorCutOff( int degreesOfTravel, int powerLevel ) {
 	powerLevel_F = (float) powerLevel;
 
 
-	/***           margin of error for cutoff timer 50%
+	/**           margin of error for cutoff timer 50%
 	*
 	*        1000 mSeconds     60 Seconds        100 Power level              1 Revolution      degreesOfTravel (input)
 	*        _____________  *  ____________ *  ___________________________ *  ____________  *  ____________
