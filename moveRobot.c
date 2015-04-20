@@ -1,4 +1,4 @@
-#include "GlobalConstants.h"
+//#include "ClawBotGlobalConstants.h"
 
 void moveRobot( int targetClawPosition, int targetWristPosition, int targetArmPosition, int armPowerLevel, int drivePowerLevel, float mmToDrive, int drift) {
 

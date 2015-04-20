@@ -15,7 +15,7 @@ void turnDegrees(float degreesToTurn);
 void moveToNeutralPosition();
 void moveRobot( int targetClawPosition, int targetWristPosition, int targetArmPosition, int armPowerLevel, int drivePowerLevel, float mmToDrive, int drift);
 
-#include "GlobalConstants.h"
+#include "ClawBotGlobalConstants.h"
 
 #include "displayMyMotorPositions.c"
 #include "turnDegrees.c"
